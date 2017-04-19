@@ -1,8 +1,9 @@
 
 html{
-  font-family: sans-serif $fontcolor;
+  font-family: sans-serif;
+  font-style: normal;
+  font: $fontcolor;
 }
 img{
-  width: 80%;
   border: $bordercolor;
 }
