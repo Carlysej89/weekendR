@@ -1,0 +1,28 @@
+{
+  "name": "weekendr",
+  "version": "1.0.0",
+  "description": "this is a weekend app",
+  "main": "build/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Carlysej89/weekendR.git"
+  },
+  "author": "Carlyse Jordan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Carlysej89/weekendR/issues"
+  },
+  "homepage": "https://github.com/Carlysej89/weekendR#readme",
+  "dependencies": {
+    "angular": "^1.6.4",
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "jquery": "^3.2.1"
+  },
+  "devDependencies": {
+    "jshint": "^2.9.4"
+  }
+}
