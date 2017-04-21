@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html>
-  <head lang= 'en'>
+<html ng-app='weekend'>
+  <head lang='en'>
     <meta charset='utf-8' >
     <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet'>
     <link href='normalize.css' rel='stylesheet'>
@@ -8,7 +8,7 @@
     <title>WeekendR</title>
   </head>
   <body>
-    <img src='img/weekenderimg.jpg'>
+    <img src='img/weekenderimg.jpg' alt='living for the weekend!'>
       <h3>Welcome to the WeekendR! Find things to do this weekend!</h3>
       <nav>
         <ul>
@@ -16,10 +16,10 @@
           <li>Create</li>
         </ul>
 
-    <aside> Past Events
-      <ul>
-        <li>
-        </li>
+    <aside ng-controller='homepageController as hpctrl'>
+      <h2 class='current'>Current Events</h2>
+      <ul ng-repeat='events in hpctrl.events'>
+        {{hpctrl.events}}
       </ul>
     </aside>
 
@@ -29,6 +29,12 @@
           <li></li>
         </ul>
     </section>
+
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js'></script>
+    <script src='/js/weekend.module.js'></script>
+    <script src='/js/homepage.service.js'></script>
+    <script src='/js/homepage.controller.js'></script>
+    <script src='/server/app.js'></script>
 
   </body>
 </html>
