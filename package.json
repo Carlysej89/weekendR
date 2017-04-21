@@ -2,7 +2,7 @@
   "name": "weekendr",
   "version": "1.0.0",
   "description": "this is a weekend app",
-  "main": "build/app.js",
+  "main": "src/server/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,7 +20,8 @@
     "angular": "^1.6.4",
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
-    "jquery": "^3.2.1"
+    "jquery": "^3.2.1",
+    "node-fetch": "^1.6.3"
   },
   "devDependencies": {
     "jshint": "^2.9.4"
