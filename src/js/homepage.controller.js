@@ -5,13 +5,18 @@
     homepageController.$inject = ['homepageService'];
     function homepageController(homepageService){
       let vm = this;
-      vm.Events = vm.events.concat(data);
+      vm.events = [];
 
-      vm.Events = function getEvents(){
+      vm.getEvents = function getEvents(){
+        console.log('now inside get events function');
         homepageService.getEvents()
-        .then (function handleEventData(data){        
+        .then (function handleEventData(data){
+          console.log(response.status);
+          vm.events = vm.events.concat(data);
         });
       };
+      vm.getEvents();
+
     }
 
 }());
