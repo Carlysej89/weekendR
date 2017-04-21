@@ -10,13 +10,13 @@ app.use(bodyParser.json());
 
 app.get('/', function showHomePage(req, res, next){
   console.log(req.url);
-  response.status(200);
-  response.setHeader('Content-Type', 'application/json');
-  response.end('Done!');
+  res.status(200);
+  res.setHeader('Content-Type', 'application/json');
+  res.end('Done!');
 });
 
 app.use('/api/meetup', require('./routes/home.route.js'));
 
-app.listen(3000, function doSomethingOnceTheServerIsUp() {
+app.listen(3003, function doSomethingOnceTheServerIsUp() {
     console.log('Running!');
 });
