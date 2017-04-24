@@ -4,7 +4,8 @@ const bodyParser = require('body-parser');
 
 let app = express();
 
-app.use(express.static(__dirname + './server'));
+// Replace http-server so that our domain / port will also have our express paths.
+app.use(express.static(__dirname + '/../src')); 
 
 app.use(bodyParser.json());
 

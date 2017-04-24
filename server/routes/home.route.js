@@ -14,8 +14,7 @@ homeRouter.get('/categories', function showAll(req, res, next){
     console.log(err);
     res.status(500);
     res.json({ error: 'Unable to load your data from the Meetup API' });
-  })
-  ;
+  });
 });
 
 module.exports = homeRouter;
