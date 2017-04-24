@@ -7,11 +7,14 @@
       let vm = this;
       vm.events = [];
 
+      /**
+       * This should return an array of event categories.
+       * @return {Array}
+       */
       vm.getEvents = function getEvents(){
-        console.log('now inside get events function');
         homepageService.getEvents()
         .then (function handleEventData(data){
-          vm.events = vm.events.concat(data);
+          vm.events = vm.events.concat(data.results);
         });
       };
       vm.getEvents();
