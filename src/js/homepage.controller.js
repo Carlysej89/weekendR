@@ -11,7 +11,6 @@
         console.log('now inside get events function');
         homepageService.getEvents()
         .then (function handleEventData(data){
-          console.log(response.status);
           vm.events = vm.events.concat(data);
         });
       };
