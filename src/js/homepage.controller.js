@@ -5,18 +5,18 @@
     homepageController.$inject = ['homepageService'];
     function homepageController(homepageService){
       let vm = this;
-      vm.events = [];
+      vm.categories = [];
 
       /**
        * This should return an array of event categories.
        * @return {Array} of events
        */
-      vm.getEvents = function getEvents(){
+      vm.getCategories = function getCategories(){
         homepageService.getEvents()
-        .then (function handleEventData(data){
-          vm.events = vm.events.concat(data.results);
+        .then (function handleCategoryData(data){
+          vm.categories = vm.categories.concat(data.results);
         });
       };
-      vm.getEvents();
+      vm.getCategories();
     }
 }());

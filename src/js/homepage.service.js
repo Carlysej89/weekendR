@@ -5,7 +5,7 @@
   homepageService.$inject = ['$http'];
   function homepageService($http){
 
-    function getEvents(){
+    function getCategories(){
       return $http({
         url:'/api/meetup/categories',
         method:'GET'
@@ -15,7 +15,7 @@
       });
     }
     return {
-      getEvents: getEvents
+      getCategories: getCategories
     };
   }
 }());
