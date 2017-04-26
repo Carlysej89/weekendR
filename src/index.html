@@ -17,9 +17,11 @@
         </ul>
 
     <aside ng-controller='homepageController as hpctrl'>
-      <h2 class='current'>Current Events</h2>
-      <ul ng-repeat='events in hpctrl.events'>
-        {{hpctrl.events}}
+      <h2 class='current'>Current Categories</h2>
+      <ul>
+        <li ng-repeat='categories in hpctrl.categories'>
+          {{categories.name}}
+        </li>
       </ul>
     </aside>
 
@@ -34,7 +36,6 @@
     <script src='/js/weekend.module.js'></script>
     <script src='/js/homepage.service.js'></script>
     <script src='/js/homepage.controller.js'></script>
-    <script src='/server/app.js'></script>
 
   </body>
 </html>
