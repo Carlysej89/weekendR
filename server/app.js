@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 let app = express();
 
 // Replace http-server so that our domain / port will also have our express paths.
-app.use(express.static(__dirname + '/../src')); 
+app.use(express.static(__dirname + '/../src'));
 
 app.use(bodyParser.json());
 
@@ -17,6 +17,7 @@ app.get('/', function showHomePage(req, res, next){
 });
 
 app.use('/api/meetup', require('./routes/home.route.js'));
+app.use('/api/meetup', require('./routes/group.route.js'));
 
 app.listen(3003, function doSomethingOnceTheServerIsUp() {
     console.log('Running!');
