@@ -7,7 +7,7 @@
   function groupService($http){
     function getGroups(){
       return $http({
-        url: 'api/meetup/2/groups',
+        url: 'api/meetup/groups',
         method: 'GET'
       })
       .then(function handleResponse(res){

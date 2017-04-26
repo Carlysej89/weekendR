@@ -9,7 +9,7 @@
 
       /**
        * This should return an array of event categories.
-       * @return {Array}
+       * @return {Array} of events
        */
       vm.getEvents = function getEvents(){
         homepageService.getEvents()
@@ -18,7 +18,5 @@
         });
       };
       vm.getEvents();
-
     }
-
 }());
