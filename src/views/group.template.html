@@ -1,0 +1,9 @@
+
+<section ng-controller='groupController as groupCtrl'>
+  <h2> Upcoming Events</h2>
+    <ul>
+      <li ng-repeat='groups in groupCtrl.groups'>
+        {{groups.name}}
+      </li>
+    </ul>
+</section>
