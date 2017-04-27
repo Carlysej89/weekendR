@@ -1,7 +1,7 @@
 (function() {
   'use strict';
-  module.exports = function(grunt){
-    grunt.initConfig({
+  module.exports = function configGrunt(gruntConfig){
+    gruntConfig.initConfig({
       clean: ['build/'],
 
       concat: {
@@ -25,46 +25,50 @@
           }
         }
       },
-
-      copyhtml:{
+      copy: {
+        copyhtml:{
         htmlcopy:{
-          files: [ {
+          files: [{
             src:'src/*.html',
+            dest: 'build/',
+            expand: true
+          }]
+        }
+      },
+
+        copythejs:{
+        files: [
+          {
+            cwd: 'src/js',
+            src: ['**/*.js'],
             dest: 'build/',
             expand: true
           }
         ]
-      }
-    },
-    copythejs:{
-      files: [
-        {
-          cwd: 'src/',
-          src: ['**/*.js'],
-          dest: 'build/',
-          expand: true
+      },
+      },
+      sass: {
+        all: {
+          files: {
+            'build/style.csss':'src/sass/main.scss'
+          }
         }
-      ]
-    },
-    sass: {
-      all: {
-        files: {
-          'build/style.csss':'src/sass/main.scss'
-        }
-      }
-    },
-    jshint: {
-      appjs: {
-        options: {
-          jshintrc: '.jshintrc'
-        },
-        files: {
-          src: ['src/**/*.js']
+      },
+
+      jshint: {
+        appjs: {
+          options: {
+            jshintrc: '.jshintrc'
+          },
+          files: {
+            src: ['src/**/*.js']
+          }
         }
       }
-    }
 
   });
-  grunt.registerTask('build',['jshint', '']);
+  require('load-grunt-tasks')(gruntConfig);
+
+  gruntConfig.registerTask('build',['clean', 'concat', 'babel', 'copy', 'sass']);
 };
 }());
