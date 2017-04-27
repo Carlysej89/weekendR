@@ -4,7 +4,7 @@ let fetch = require('node-fetch');
 let allGroups = [];
 
 groupRouter.get('/groups', function showAllGroups(req, res, next){
-  fetch('https://api.meetup.com/2/groups?category_id=34&key=6c3f627cb3159597874394e545dd5d',
+  fetch('https://api.meetup.com/2/groups?zip=20007&key=6c3f627cb3159597874394e545dd5d',
     {
       method: 'GET'
     }
