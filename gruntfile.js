@@ -27,30 +27,42 @@
       },
       copy: {
         copyhtml:{
-        htmlcopy:{
           files: [{
-            src:'src/*.html',
+            cwd:'src/',
+            src:'*.html',
             dest: 'build/',
+            expand: true
+          }]
+        },
+        copythejs:{
+          files: [{
+              cwd: 'src/js',
+              src: ['**/*.js'],
+              dest: 'build/',
+              expand: true
+            }]
+        },
+        copytheimg:{
+          files: [{
+              cwd:'src/img',
+              src:['**/*.jpg'],
+              dest: 'build/img',
+              expand: true
+            }]
+        },
+        copytheviews:{
+          files:[{
+            cwd:'src/views',
+            src:'**/*.html',
+            dest:'build/views',
             expand: true
           }]
         }
       },
-
-        copythejs:{
-        files: [
-          {
-            cwd: 'src/js',
-            src: ['**/*.js'],
-            dest: 'build/',
-            expand: true
-          }
-        ]
-      },
-      },
       sass: {
         all: {
           files: {
-            'build/style.csss':'src/sass/main.scss'
+            'build/style.css':'src/sass/main.scss'
           }
         }
       },
@@ -66,9 +78,9 @@
         }
       }
 
-  });
-  require('load-grunt-tasks')(gruntConfig);
+    });
+    require('load-grunt-tasks')(gruntConfig);
 
-  gruntConfig.registerTask('build',['clean', 'concat', 'babel', 'copy', 'sass']);
-};
+    gruntConfig.registerTask('build',['clean', 'concat', 'babel', 'copy', 'sass']);
+  };
 }());
