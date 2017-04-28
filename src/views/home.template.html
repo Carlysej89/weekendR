@@ -1,0 +1,10 @@
+<aside ng-controller='homepageController as hpctrl'>
+  <h2 class='current'>Current Categories</h2>
+  <ul>
+    <li ng-repeat='event in hpctrl.events'>
+      <a ui-sref='groups'>
+           {{event.name}}
+      </a>
+    </li>
+  </ul>
+</aside>
