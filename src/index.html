@@ -13,29 +13,22 @@
       <nav>
         <ul>
           <li>Home</li>
-          <li>Create</li>
+          <li>About</li>
         </ul>
 
     <aside ng-controller='homepageController as hpctrl'>
       <h2 class='current'>Current Categories</h2>
       <ul>
-        <li ng-repeat='categories in hpctrl.categories'>
-          {{categories.name}}
+        <li ng-repeat='event in hpctrl.events'>
+               {{event.name}}
         </li>
       </ul>
     </aside>
 
-    <section>
-      <h2> Upcoming Events</h2>
-        <ul>
-          <li></li>
-        </ul>
-    </section>
 
     <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js'></script>
-    <script src='/js/weekend.module.js'></script>
-    <script src='/js/homepage.service.js'></script>
-    <script src='/js/homepage.controller.js'></script>
+    <script src='//unpkg.com/angular-ui-router/release/angular-ui-router.min.js'></script>
+    <script src='build/app.js'></script>
 
   </body>
 </html>
