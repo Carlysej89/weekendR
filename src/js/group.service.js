@@ -1,10 +1,15 @@
 (function() {
   'use strict';
-  angular.module('weekend').factory('groupService', groupService);
+  angular.module('weekend').factory('GroupService', GroupService);
 
-  groupService.$inject = ['$http'];
+  GroupService.$inject = ['$http'];
 
-  function groupService($http){
+  function GroupService($http){
+
+    /**
+     * This should return the response from the API
+     * @return {object}
+     */
     function getGroups(){
       return $http({
         url: 'api/meetup/groups',

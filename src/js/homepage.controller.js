@@ -2,9 +2,9 @@
   'use strict';
    angular.module('weekend').controller('homepageController', homepageController);
 
-    homepageController.$inject = ['homepageService'];
-    function homepageController(homepageService){
-      
+    homepageController.$inject = ['$state','HomepageService'];
+    function homepageController($state,HomepageService){
+
       let vm = this;
       vm.events = [];
 
@@ -13,7 +13,7 @@
        * @return {Array} of categories
        */
       vm.getEvents = function getEvents(){
-        homepageService.getEvents()
+        HomepageService.getEvents()
         .then (function handleEventData(data){
           vm.events = vm.events.concat(data.results);
         });

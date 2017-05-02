@@ -2,14 +2,17 @@
   'use strict';
   angular.module('weekend').controller('groupController', groupController);
 
-  groupController.$inject = ['groupService'];
+  groupController.$inject = ['$state','GroupService'];
 
-  function groupController(groupController){
+  function groupController($state, GroupService){
     let vm = this;
-    let groups = [];
-
+     vm.groups = [];
+    /**
+     * This function should retrieve all the groups
+     * @return {Array} of groups
+     */
     vm.getGroups = function getGroups(){
-      groupsService.getGroups().then(function handleGroupData(data){
+      GroupService.getGroups().then(function handleGroupData(data){
         vm.groups = vm.groups.concat(data.results);
       });
     };

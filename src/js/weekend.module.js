@@ -14,17 +14,17 @@
     .state({
       name: 'home',
       url: '/',
-      templateUrl: '/index.html',
+      templateUrl: 'views/home.template.html',
       controller: 'homepageController',
       controllerAs: 'hpCtrl'
     }).state({
       name: 'about',
       url: '/about',
-      templateUrl: '/views/about.template.html'
+      templateUrl: 'views/about.template.html'
     }).state({
-      name: 'group',
+      name: 'groups',
       url: '/groups',
-      templateUrl: '/views/group.template.html',
+      templateUrl: 'views/group.template.html',
       controller: 'groupController',
       controllerAs: 'groupCtrl'
     });

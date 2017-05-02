@@ -1,10 +1,14 @@
 (function() {
   'use strict';
-  angular.module('weekend').factory('homepageService', homepageService);
+  angular.module('weekend').factory('HomepageService', HomepageService);
 
-  homepageService.$inject = ['$http'];
-  function homepageService($http){
+  HomepageService.$inject = ['$http'];
+  function HomepageService($http){
 
+    /**
+     * This should handle getting the groups from the API
+     * @return {object}
+     */
     function getEvents(){
       return $http({
         url:'/api/meetup/categories',
