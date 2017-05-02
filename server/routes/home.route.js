@@ -1,7 +1,11 @@
 const homeRouter = require('express').Router();
+
 let fetch = require('node-fetch');
-let allEvents = [];
+
+let allCategories = [];
+
 homeRouter.get('/categories', function showAll(req, res, next){
+
   fetch('https://api.meetup.com/2/categories?key=6c3f627cb3159597874394e545dd5d',
     {
       method: 'GET'
