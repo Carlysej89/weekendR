@@ -18,6 +18,8 @@ app.get('/', function showHomePage(req, res, next){
 
 app.use('/api/meetup', require('./routes/home.route.js'));
 app.use('/api/meetup', require('./routes/group.route.js'));
+app.use('/api/meetup', require('./routes/events.route.js'));
+
 
 app.listen(3003, function doSomethingOnceTheServerIsUp() {
     console.log('Running!');
