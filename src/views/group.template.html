@@ -4,7 +4,9 @@
     <p>Check out the groups below to see what they have going on!</p>
     <ul>
       <li ng-repeat='groups in groupCtrl.groups'>
+        <a ui-sref= 'events'>
         {{groups.name}}
+      </a>
       </li>
     </ul>
 </section>

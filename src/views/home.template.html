@@ -1,9 +1,9 @@
 <aside ng-controller='homepageController as hpctrl'>
   <h2 class='current'>Current Categories</h2>
   <ul>
-    <li ng-repeat='event in hpctrl.events'>
+    <li ng-repeat='categories in hpctrl.categories'>
       <a ui-sref='groups'>
-           {{event.name}}
+           {{categories.name}}
       </a>
     </li>
   </ul>
