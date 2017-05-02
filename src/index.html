@@ -1,35 +1,29 @@
 <!DOCTYPE html>
 <html ng-app='weekend'>
-  <head lang='en'>
-    <meta charset='utf-8' >
-    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet'>
-    <link href='/style.css' rel='stylesheet'>
-    <title>WeekendR</title>
-  </head>
-  <body>
-    <img src='img/weekenderimg.jpg' alt='living for the weekend!'>
-      <h3>Welcome to the WeekendR! Find things to do this weekend!</h3>
-      <nav>
-        <ul>
-          <li><a ui-sref='home'>Home</a></li>
-          <li><a ui-sref='about'>About</a></li>
-        </ul>
+<head lang='en'>
+  <meta charset='utf-8' >
+  <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet'>
+  <link href='/style.css' rel='stylesheet'>
+  <title>WeekendR</title>
+</head>
+<body>
+  <header>
+  <img src='img/weekenderimg.jpg' alt='living for the weekend!'>
+  <h3>Welcome to the WeekendR! Find things to do this weekend!</h3>
+  </header>
+  <nav>
+    <ul>
+      <li><a ui-sref='home'>Home</a></li>
+      <li><a ui-sref='about'>About</a></li>
+    </ul>
 
-    <aside ng-controller='homepageController as hpctrl'>
-      <h2 class='current'>Current Categories</h2>
-      <ul>
-        <li ng-repeat='event in hpctrl.events'>
-          <a ui-sref='groups'>
-               {{event.name}}
-          </a>
-        </li>
-      </ul>
-    </aside>
+  </nav>
+  <main ui-view></main>
 
 
-    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js'></script>
-    <script src='//unpkg.com/angular-ui-router/release/angular-ui-router.min.js'></script>
-    <script src='/js/app.js'></script>
+  <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js'></script>
+  <script src='//unpkg.com/angular-ui-router/release/angular-ui-router.min.js'></script>
+  <script src='/js/app.js'></script>
 
-  </body>
+</body>
 </html>
