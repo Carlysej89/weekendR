@@ -34,14 +34,14 @@
             expand: true
           }]
         },
-        copythejs:{
-          files: [{
-              cwd: 'src/js',
-              src: ['**/*.js'],
-              dest: 'build/',
-              expand: true
-            }]
-        },
+        // copythejs:{
+        //   files: [{
+        //       cwd: 'src/js',
+        //       src: ['**/*.js'],
+        //       dest: 'build/js',
+        //       expand: true
+        //     }]
+        // },
         copytheimg:{
           files: [{
               cwd:'src/img',
@@ -76,10 +76,33 @@
             src: ['src/**/*.js']
           }
         }
-      }
+      },
+      watch: {
+        css:{
+          files: ['src/sass/*.scss'],
+          tasks: ['sass']
+        }
+      },
+        html:{
+          files:['src/views/*.html','src/index.html'],
+          tasks:['copy']
+        },
+        js:{
+          files:['src/js/*.js'],
+          tasks:['concat','babel']
+        }
+
 
     });
     require('load-grunt-tasks')(gruntConfig);
+    gruntConfig.loadNpmTasks('grunt-contrib-watch');
+    gruntConfig.loadNpmTasks('grunt-contrib-copy');
+    gruntConfig.loadNpmTasks('grunt-contrib-concat');
+    gruntConfig.loadNpmTasks('grunt-contrib-clean');
+    gruntConfig.loadNpmTasks('grunt-contrib-sass');
+
+
+
 
     gruntConfig.registerTask('build',['clean', 'concat', 'babel', 'copy', 'sass']);
   };
