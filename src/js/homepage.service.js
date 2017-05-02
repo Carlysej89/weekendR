@@ -9,7 +9,7 @@
      * This should handle getting the groups from the API
      * @return {object}
      */
-    function getEvents(){
+    function getCategories(){
       return $http({
         url:'/api/meetup/categories',
         method:'GET'
@@ -19,7 +19,7 @@
       });
     }
     return {
-      getEvents: getEvents
+      getCategories: getCategories
     };
   }
 }());

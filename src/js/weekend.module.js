@@ -27,6 +27,13 @@
       templateUrl: 'views/group.template.html',
       controller: 'groupController',
       controllerAs: 'groupCtrl'
+    }).state({
+      name: 'events',
+      url: '/events',
+      templateUrl: 'views/events.template.html',
+      controller: 'eventController',
+      controllerAs: 'evtCtrl'
     });
+
   }
 }());

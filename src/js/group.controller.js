@@ -12,7 +12,8 @@
      * @return {Array} of groups
      */
     vm.getGroups = function getGroups(){
-      GroupService.getGroups().then(function handleGroupData(data){
+      GroupService.getGroups()
+      .then(function handleGroupData(data){
         vm.groups = vm.groups.concat(data.results);
       });
     };

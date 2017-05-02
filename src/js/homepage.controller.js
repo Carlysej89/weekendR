@@ -6,18 +6,18 @@
     function homepageController($state,HomepageService){
 
       let vm = this;
-      vm.events = [];
+      vm.categories = [];
 
       /**
        * This should return an array of event categories.
        * @return {Array} of categories
        */
-      vm.getEvents = function getEvents(){
-        HomepageService.getEvents()
-        .then (function handleEventData(data){
-          vm.events = vm.events.concat(data.results);
+      vm.getCategories = function getCategories(){
+        HomepageService.getCategories()
+        .then (function handleCategoryData(data){
+          vm.categories = vm.categories.concat(data.results);
         });
       };
-      vm.getEvents();
+      vm.getCategories();
     }
 }());
