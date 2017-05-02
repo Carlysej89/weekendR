@@ -3,7 +3,7 @@
    angular.module('weekend').controller('homepageController', homepageController);
 
     homepageController.$inject = ['$state','HomepageService'];
-    function homepageController($state,HomepageService){
+    function homepageController($state, HomepageService){
 
       let vm = this;
       vm.categories = [];
