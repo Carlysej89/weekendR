@@ -1,6 +1,9 @@
 .nav-wrapper{
-  display: flex;
+  display: inline-flex;
 }
 form{
   justify-content: flex-start;
+}
+input{
+  width: 25%;
 }
