@@ -1,7 +1,7 @@
 <aside ng-controller='homepageController as hpctrl'>
   <h2 class='current'>Current Categories</h2>
   <ul>
-    <li ng-repeat='categories in hpctrl.categories'>
+    <li ng-repeat='categories in hpctrl.categories' class='card-panel'>
       <a ui-sref='groups'>
            {{categories.name}}
       </a>
