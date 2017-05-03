@@ -2,20 +2,29 @@
 <html ng-app='weekend'>
 <head lang='en'>
   <meta charset='utf-8' >
-  <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css' rel='stylesheet'>
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href='/style.css' rel='stylesheet'>
   <title>WeekendeR</title>
 </head>
 <body>
-  <header>
+  <header class='card-panel'>
   <img src='img/weekenderimg.jpg' alt='living for the weekend!'>
   <h3>Welcome to the WeekendeR! Find things to do this weekend!</h3>
   </header>
-  <nav>
-    <ul>
-      <li><a ui-sref='home'>Home</a></li>
-      <li><a ui-sref='about'>About</a></li>
-    </ul>
+  <nav class="nav-wrapper">
+    <form>
+      <input id="search" type="search" placeholder='Search'required>
+      <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+      <i class="material-icons">close</i>
+    </form>
+    <a href="#" class="brand-logo center">WeekendeR</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a ui-sref='home'>Home</a></li>
+        <li><a ui-sref='about'>About</a></li>
+      </ul>
+
 
   </nav>
   <main ui-view></main>

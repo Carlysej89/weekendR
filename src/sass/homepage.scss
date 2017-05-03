@@ -1,10 +1,23 @@
 
-html{
+html {
   font-family: sans-serif;
   font-style: normal;
   font: $fontcolor;
 }
-img{
+.card-panel {
+  margin-bottom: inherit;
+  background: $backgroundColor;
+}
+img {
   border: $bordercolor;
-
+}
+h2 {
+ margin-top: inherit;
+}
+aside {
+ background-color: #b0bec5;
+}
+li {
+  width: inherit;
+  float: inherit;
 }
