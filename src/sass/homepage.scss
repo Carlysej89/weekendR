@@ -8,9 +8,8 @@ body{
   text-align: center;
 }
 .card-panel {
-  margin-left: auto;
-  margin-right: auto;
-  width: 6em;
+  padding: 80%;
+  margin: inherit;
   background: $backgroundColor;
 }
 img {
@@ -18,14 +17,12 @@ img {
 }
 h2 {
  margin-top: inherit;
- text-align: center;
 }
 aside {
  background-color: $themebackGroundColor;
 }
 li {
   width: 80%;
-  padding: 20%;
 }
 section{
   background-color: $themebackGroundColor;
