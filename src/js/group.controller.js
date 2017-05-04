@@ -9,7 +9,7 @@
      vm.groups = [];
     /**
      * This function should retrieve all the groups
-     * @return {Array} of groups
+     * @return {Array} should return an array of objects
      */
     vm.getGroups = function getGroups(){
       GroupService.getGroups()

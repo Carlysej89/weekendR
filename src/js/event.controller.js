@@ -10,8 +10,8 @@
 
 
     /**
-     * [events description]
-     * @return {[type]} [description]
+     * This is a function that should retrieve a list of events
+     * @return {Array} this should return an array of objects
      */
     vm.getEvents = function getEvents(){
       EventService.getEvents()

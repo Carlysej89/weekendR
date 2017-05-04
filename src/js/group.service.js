@@ -7,8 +7,8 @@
   function GroupService($http){
 
     /**
-     * This should return the response from the API
-     * @return {object}
+     * This should retrieve a response from the API
+     * @return {object} should return objects list of groups
      */
     function getGroups(){
       return $http({

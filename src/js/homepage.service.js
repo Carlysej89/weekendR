@@ -6,7 +6,7 @@
   function HomepageService($http){
 
     /**
-     * This should handle getting the groups from the API
+     * This should handle getting the categories from the API
      * @return {object}
      */
     function getCategories(){
