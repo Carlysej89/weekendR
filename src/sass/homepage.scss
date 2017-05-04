@@ -4,8 +4,13 @@ html {
   font-style: normal;
   font: $fontcolor;
 }
+body{
+  text-align: center;
+}
 .card-panel {
-  margin-bottom: inherit;
+  margin-left: auto;
+  margin-right: auto;
+  width: 6em;
   background: $backgroundColor;
 }
 img {
@@ -13,13 +18,14 @@ img {
 }
 h2 {
  margin-top: inherit;
+ text-align: center;
 }
 aside {
  background-color: $themebackGroundColor;
 }
 li {
-  width: inherit;
-  float: inherit;
+  width: 80%;
+  padding: 20%;
 }
 section{
   background-color: $themebackGroundColor;
