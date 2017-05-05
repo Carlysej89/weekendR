@@ -1,23 +1,40 @@
-/*
-Errno::ENOENT: No such file or directory @ rb_sysopen - sasrss/src/main.scss
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
 
-Backtrace:
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:484:in `read'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:484:in `update_stylesheet'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `each'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:294:in `watch'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.4.23/lib/sass/plugin.rb:109:in `method_missing'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:360:in `watch_or_update'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:51:in `process_result'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.4.23/lib/sass/exec/base.rb:52:in `parse'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.4.23/lib/sass/exec/base.rb:19:in `parse!'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.4.23/bin/sass:13:in `<top (required)>'
-/usr/local/bin/sass:22:in `load'
-/usr/local/bin/sass:22:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Errno::ENOENT: No such file or directory @ rb_sysopen - sasrss/src/main.scss"; }
+html {
+  color: #1C1C1C;
+  font-family: "PT Sans", sans-serif; }
+
+body {
+  text-align: center; }
+
+header {
+  background-color: #9dc8c8; }
+
+img {
+  width: 100%;
+  text-align: center;
+  border: 1em solid #767689; }
+
+aside {
+  background-color: #b0bec5; }
+
+section {
+  background-color: #b0bec5; }
+
+main {
+  background-color: #b0bec5; }
+
+.categories li {
+  height: 100px;
+  font-size: 48px;
+  color: #1C1C1C;
+  font-family: "Mrs Sheppards", cursive;
+  text-align: center;
+  background: url("/img/pexels-photo-253682.jpeg");
+  background-position: bottom;
+  background-size: cover; }
+
+/*# sourceMappingURL=styles.css.map */
