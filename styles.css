@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+html {
+  color: #D81159;
+  font-family: "PT Sans", sans-serif; }
+
+body {
+  text-align: center; }
+
+header {
+  background-color: #9dc8c8; }
+
+h2 {
+  padding-top: 1em; }
+
+img {
+  width: 100%;
+  text-align: center;
+  border: 1em solid #767689; }
+
+aside {
+  background-color: #b0bec5; }
+
+section {
+  background-color: #b0bec5; }
+
+main {
+  background-color: #b0bec5; }
+
+.categories li {
+  height: 100px;
+  font-size: 48px;
+  text-decoration-color: #D9D4CF;
+  font-family: "Mrs Sheppards", cursive;
+  text-align: center;
+  background: url("/img/pexels-photo-253682.jpeg");
+  background-position: center bottom;
+  background-size: cover; }
+
+section {
+  background: #b0bec5; }
+
+.card-panel {
+  background-color: #9DC8C8;
+  font-size: 24px;
+  color: #D81159; }
+
+p {
+  text-align: center;
+  font-size: 24px; }
+
+/*# sourceMappingURL=styles.css.map */
