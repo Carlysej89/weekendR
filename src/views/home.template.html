@@ -1,10 +1,11 @@
-<aside ng-controller='homepageController as hpctrl'>
+<section ng-controller='homepageController as hpctrl' class='categories'>
   <h2 class='current'>Current Categories</h2>
   <ul>
-    <li ng-repeat='categories in hpctrl.categories' class='card-panel'>
+    <li ng-repeat='categories in hpctrl.categories' class='card-panel' style="background: url('/img/{{categories.shortname}}.jpg');">
       <a ui-sref='groups'>
+
            {{categories.name}}
       </a>
     </li>
   </ul>
-</aside>
+</section>
