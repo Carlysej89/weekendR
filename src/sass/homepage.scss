@@ -1,36 +1,48 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding:0;
+}
 
 html {
-  font-family: sans-serif;
-  font-style: normal;
-  font: $fontcolor;
+  color: $fontcolor;
+  font-family: $text;
 }
-body{
+
+body {
   text-align: center;
 }
-header{
-  text-align: center;
+header {
+  background-color: #9dc8c8;
 }
-.card-panel {
-  width: 2em;
-  margin-bottom: inherit;
-  background: $backgroundColor;
-}
+
 img {
+  width: 100%;
+  text-align: center;
   border: $bordercolor;
 }
-h2 {
- margin-top: inherit;
-}
+
 aside {
  background-color: $themebackGroundColor;
 }
-li {
-  height: 2em;
-  width: 3em;
-}
+
 section{
   background-color: $themebackGroundColor;
 }
+
 main {
   background-color: $themebackGroundColor;
+}
+
+.categories {
+  li {
+    height: 100px;
+    font-size: 48px;
+    color: $fontcolor;
+    font-family: $lists;
+    text-align: center;
+    background: url('/img/pexels-photo-253682.jpeg');
+    background-position: bottom;
+    background-size: cover;
+  }
 }

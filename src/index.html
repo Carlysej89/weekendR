@@ -5,10 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css' rel='stylesheet'>
    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Mrs+Sheppards|PT+Sans" rel="stylesheet">
   <link href='/style.css' rel='stylesheet'>
   <title>WeekendeR</title>
 </head>
 <body>
+  <div class='container'>
   <header class='card-panel'>
   <img src='img/weekenderimg.jpg' alt='living for the weekend!'>
   <h3>Welcome to the WeekendeR! Find things to do this weekend!</h3>
@@ -19,15 +21,12 @@
         <li><a ui-sref='home'>Home</a></li>
         <li><a ui-sref='about'>About</a></li>
       </ul>
-
-
   </nav>
   <main ui-view></main>
 
-
+</div>
   <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js'></script>
   <script src='//unpkg.com/angular-ui-router/release/angular-ui-router.min.js'></script>
   <script src='/js/app.js'></script>
-
 </body>
 </html>
