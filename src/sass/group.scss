@@ -1,6 +1,9 @@
 section {
   background: $themebackGroundColor;
 }
-li{
+
+.card-panel {
   background-color: #9DC8C8;
+  font-size: 24px;
+  color: $fontcolor;
 }
